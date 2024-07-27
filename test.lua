@@ -1,3 +1,14 @@
+canautoparry = call
+                            if canautoparry then
+                                startautoparry()
+                            else
+                                for i,v in next, parrycon do
+                                    v:Disconnect()
+                                end
+                                table.clear(parrycon)
+                            end
+                        end
+
 local canautoparry = true 
 local canautorapture = false
 local canautospam = true 
